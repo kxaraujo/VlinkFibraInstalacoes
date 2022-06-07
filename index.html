@@ -1,0 +1,266 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>VlinkFibra</title>
+
+    <style>
+      body {
+        background: lightgray;
+      }
+      .topo {
+        background: blue;
+        color: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px 0 white;
+      }
+
+      .planos {
+        background: white;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        box-shadow: 0 0 10px 0 white;
+        cursor: pointer;
+        border: 5px solid white;
+      }
+
+      .botao {
+        background: blue;
+        text-align: center;
+        padding: 15px;
+        margin-top: 30px;
+        margin-bottom: 10px;
+        border-radius: 50px;
+        color: white;
+        font-weight: bold;
+        font-size: 20px;
+        cursor: pointer;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: 38px;
+        font-family: "Righteous";
+      }
+
+      h2 {
+        margin: 0;
+        font-size: 18px;
+      }
+
+      h3 {
+        font-size: 25px;
+        margin-bottom: 5px;
+      }
+
+      h4 {
+        margin-top: 0;
+        margin-bottom: 5px;
+        font-size: 25px;
+      }
+
+      h5 {
+        margin-top: 0;
+        margin-bottom: 5px;
+        font-size: 20px;
+        color: black;
+      }
+
+      h6 {
+        color: red;
+      }
+
+      img {
+        width: 100px;
+        border-radius: 10px;
+        float: right;
+      }
+
+      .instagram {
+        cursor: pointer;
+        float: right;
+      }
+      .facebook {
+        cursor: pointer;
+        float: right;
+      }
+
+      .promos {
+        background: white;
+        padding: 0px;
+        min-height: 30px;
+        min-width: 30px;
+        border-radius: 10px;
+        margin-bottom: 5px;
+        box-shadow: 0 0 10px 0 blue;
+        cursor: pointer;
+        border: 5px solid white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="topo">
+      <img
+        src="https://d3ehdj6hg8w608.cloudfront.net/cms/2019/08/08/5d4c2d2668f56ig-compara-servicos.svg"
+      />
+      <h1>VlinkFibra</h1>
+      <h2>Mesmo valor, velocidade em dobro!</h2>
+    </div>
+
+    <h3>Escolha o plano de sua preferência:</h3>
+
+    <div id="prime" class="planos" onclick="pPrime()">
+      <img src="vlinktopo.jpg" />
+      <h4>Prime</h4>
+      <p>100Mbps</p>
+      <p><strong> R$ 59,90</strong></p>
+    </div>
+
+    <div id="plus" class="planos" onclick="pPlus()">
+      <img src="vlinktopo.jpg" />
+      <h4>Plus</h4>
+      <p>150Mbps</p>
+      <p><strong> R$ 69,90</strong></p>
+    </div>
+
+    <div id="max" class="planos" onclick="pMax()">
+      <img src="vlinktopo.jpg" />
+      <h4>Max</h4>
+      <p>200Mbps</p>
+      <p><strong> R$ 79,90</strong></p>
+    </div>
+
+    <div id="ultra" class="planos" onclick="pUltra()">
+      <img src="vlinktopo.jpg" />
+      <h4>ULTRA</h4>
+      <p>300Mbps</p>
+      <p><strong> R$ 89,90</strong></p>
+    </div>
+  
+    <div id="mega" class="planos" onclick="pMega()">
+      <img src="vlinktopo.jpg" />
+      <h4>MEGA</h4>
+      <p>400Mbps</p>
+      <p><strong> R$ 99,90<strong></p>
+    </div>
+    
+    <div id="master" class="planos" onclick="pMaster()">
+      <img src="vlinktopo.jpg" />
+      <h4>MASTER</h4>
+      <p>500Mbps</p>
+      <p><strong> R$ 109,90<strong></p>
+    </div>
+
+    <div class="botao" onclick="solicitarInstalacao()">
+      Solicitar Instalação
+    </div>
+
+    <div class="promos" onclick="park()">
+      <img src="promocao.jpg" />
+      <h5>
+        <br />
+        Clientes Vlink possuem direito a meia-entrada para a família no SUNDOWN
+        PARK!
+      </h5>
+      <h6>*Consulte o regularmento.</h6>
+    </div>
+
+    <div class="instagram" onclick="rede1()">
+      <img
+        src="https://vendermais.kathavento.com.br/wp-content/uploads/2018/10/Instagram-Qual-a-importancia-da-sua-loja-ter-um-perfil-ativo-nessa-rede-social.jpg"
+      />
+    </div>
+    <div class="facebook" onclick="rede2()">
+      <img
+        src="https://avitrini.com/wp-content/uploads/2020/05/facebook-telefone-contato-700x420.jpg"
+      />
+    </div>
+
+    <script>
+      let pedido;
+
+      function pPrime() {
+        document.getElementById("prime").style.borderColor = "blue";
+        document.getElementById("plus").style.borderColor = "white";
+        document.getElementById("max").style.borderColor = "white";
+        document.getElementById("ultra").style.borderColor = "white";
+        document.getElementById("mega").style.borderColor = "white";
+        document.getElementById("master").style.borderColor = "white";
+        
+        pedido = "PRIME";
+      }
+      function pPlus() {
+        document.getElementById("plus").style.borderColor = "blue";
+        document.getElementById("prime").style.borderColor = "white";
+        document.getElementById("max").style.borderColor = "white";
+        document.getElementById("ultra").style.borderColor = "white";
+        document.getElementById("mega").style.borderColor = "white";
+        document.getElementById("master").style.borderColor = "white";
+        pedido = "PLUS";
+      }
+      function pMax() {
+        document.getElementById("max").style.borderColor = "blue";
+        document.getElementById("prime").style.borderColor = "white";
+        document.getElementById("plus").style.borderColor = "white";
+        document.getElementById("ultra").style.borderColor = "white";
+        document.getElementById("mega").style.borderColor = "white";
+        document.getElementById("master").style.borderColor = "white";
+        pedido = "MAX";
+      }
+      function pUltra() {
+        document.getElementById("ultra").style.borderColor = "blue";
+        document.getElementById("prime").style.borderColor = "white";
+        document.getElementById("plus").style.borderColor = "white";
+        document.getElementById("max").style.borderColor = "white";
+        document.getElementById("mega").style.borderColor = "white";
+        document.getElementById("master").style.borderColor = "white";
+        pedido = "ULTRA";
+      }
+      function pMega() {
+        document.getElementById("mega").style.borderColor = "blue";
+        document.getElementById("prime").style.borderColor = "white";
+        document.getElementById("plus").style.borderColor = "white";
+        document.getElementById("max").style.borderColor = "white";
+        document.getElementById("ultra").style.borderColor = "white";
+        document.getElementById("master").style.borderColor = "white";
+        pedido = "MEGA";
+      }
+      function pMaster() {
+        document.getElementById("master").style.borderColor = "blue";
+        document.getElementById("prime").style.borderColor = "white";
+        document.getElementById("plus").style.borderColor = "white";
+        document.getElementById("max").style.borderColor = "white";
+        document.getElementById("ultra").style.borderColor = "white";
+        document.getElementById("mega").style.borderColor = "white";
+        pedido = "MASTER";
+      }
+  
+      function solicitarInstalacao() {
+        let mensagem;
+
+        mensagem =
+          "Olá, gostaria de solicitar a instalação do plano " +
+          pedido +
+          " da Vlink Fibra!";
+        window.open("https://wa.me/+5587981154459?text=" + mensagem);
+      }
+
+      function rede1() {
+        window.open("https://www.instagram.com/vlinkprovedor/");
+      }
+
+      function rede2() {
+        window.open("https://pt-br.facebook.com/vlinkprovedor/");
+      }
+
+      function park() {
+        window.open("http://www.sundownpark.com.br/");
+      }
+    </script>
+  </body>
+</html>
